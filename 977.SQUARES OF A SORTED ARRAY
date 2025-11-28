@@ -1,0 +1,9 @@
+class Solution {
+public:
+    vector<int> sortedSquares(vector<int>& nums) {
+        vector<int> res(nums.size());
+        transform(nums.begin(), nums.end(), res.begin(), [](int x){ return x*x; });
+        sort(res.begin(), res.end());
+        return res;
+    }
+};
